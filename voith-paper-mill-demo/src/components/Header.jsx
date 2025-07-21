@@ -7,7 +7,7 @@ function Header() {
         <div className="flex items-center justify-between h-16">
           {/* Logo Section */}
           <div className="flex items-center">
-            <h1 className="text-3xl font-bold text-voith-primary tracking-tight">VOITH</h1>
+            <h1 className="text-3xl font-bold text-voith-primary tracking-tight">Full Stack Paper</h1>
           </div>
           
           {/* Title Section */}
