@@ -5,6 +5,7 @@ import ControlPanel from './components/ControlPanel';
 import SensorDashboard from './components/SensorDashboard';
 import { useSensorData } from './hooks/useSensorData';
 import { SENSORS, COMPONENTS } from './constants/millData';
+import { Analytics } from "@vercel/analytics/react";
 
 const MAX_DATA_POINTS = 30;
 
@@ -128,6 +129,7 @@ function App() {
           </div>
         </div>
       </main>
+      <Analytics />
     </div>
   );
 }
