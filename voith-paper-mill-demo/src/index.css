@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  /* Colors */
+  --color-voith-primary: #003d82;
+  --color-voith-blue: #2d4275; 
+  --color-voith-blue-light: #4a6ba7;
+  --color-voith-blue-dark: #1a2c5a;
+  --color-voith-blue-hover: #266693;
+  --color-voith-accent: #00a8e6;
+  --color-voith-cyan: #00e5e5;
+  --color-voith-green: #00e500;
+  
+  /* Gray scale */
+  --color-voith-gray-50: #f8fafc;
+  --color-voith-gray-100: #f1f5f9;
+  --color-voith-gray-200: #e2e8f0;
+  --color-voith-gray-300: #cbd5e1;
+  --color-voith-gray-400: #94a3b8;
+  --color-voith-gray-500: #64748b;
+  --color-voith-gray-600: #475569;
+  --color-voith-gray-700: #334155;
+  --color-voith-gray-800: #1e293b;
+  --color-voith-gray-900: #0f172a;
+  --color-voith-gray-light: #f2f2f2;
+  --color-voith-gray-medium: #6f6f6f;
+  --color-voith-gray-dark: #4f4f4f;
+  
+  /* Font families */
+  --font-family-sans: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  
+  /* Box shadows */
+  --shadow-voith: 0 4px 6px -1px rgba(45, 66, 117, 0.1), 0 2px 4px -1px rgba(45, 66, 117, 0.06);
+  --shadow-voith-lg: 0 10px 15px -3px rgba(45, 66, 117, 0.1), 0 4px 6px -2px rgba(45, 66, 117, 0.05);
+  
+  /* Spacing */
+  --spacing-18: 4.5rem;
+  --spacing-88: 22rem;
+}
+
+@layer base {
+  body {
+    font-feature-settings: 'rlig' 1, 'calt' 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer utilities {
+  .voith-gradient {
+    background: linear-gradient(135deg, #003d82 0%, #2d4275 100%);
+  }
+  
+  .voith-card {
+    @apply bg-white rounded-xl shadow-voith border border-voith-gray-200;
+  }
+  
+  .voith-btn-primary {
+    @apply bg-voith-primary hover:bg-voith-blue-dark text-white font-medium py-3 px-6 rounded-lg transition-all duration-200 ease-in-out shadow-voith hover:shadow-voith-lg flex items-center justify-center;
+  }
+  
+  .voith-btn-secondary {
+    @apply bg-white hover:bg-voith-gray-50 text-voith-primary font-medium py-3 px-6 rounded-lg border border-voith-gray-300 transition-all duration-200 ease-in-out shadow-sm hover:shadow-voith flex items-center justify-center;
+  }
+}
