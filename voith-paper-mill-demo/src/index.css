@@ -3,9 +3,17 @@
 @import "tailwindcss";
 
 @theme {
-  /* Colors */
-  --color-voith-primary: #003d82;
-  --color-voith-blue: #2d4275; 
+  /* Full Stack Science Colors - Technical Authority Palette */
+  --color-fss-primary: #1B365D;
+  --color-fss-secondary: #2C5282; 
+  --color-fss-accent: #E53E3E;
+  --color-fss-success: #38A169;
+  --color-fss-gray: #718096;
+  --color-fss-charcoal: #374151;
+  
+  /* Legacy Voith Colors for paper mill demo */
+  --color-voith-primary: #005493;
+  --color-voith-blue: #005493; 
   --color-voith-blue-light: #4a6ba7;
   --color-voith-blue-dark: #1a2c5a;
   --color-voith-blue-hover: #266693;
@@ -14,16 +22,16 @@
   --color-voith-green: #00e500;
   
   /* Gray scale */
-  --color-voith-gray-50: #f8fafc;
-  --color-voith-gray-100: #f1f5f9;
-  --color-voith-gray-200: #e2e8f0;
-  --color-voith-gray-300: #cbd5e1;
-  --color-voith-gray-400: #94a3b8;
-  --color-voith-gray-500: #64748b;
-  --color-voith-gray-600: #475569;
-  --color-voith-gray-700: #334155;
-  --color-voith-gray-800: #1e293b;
-  --color-voith-gray-900: #0f172a;
+  --color-voith-gray-50: #f9fafb;
+  --color-voith-gray-100: #f3f4f6;
+  --color-voith-gray-200: #e5e7eb;
+  --color-voith-gray-300: #d1d5db;
+  --color-voith-gray-400: #9ca3af;
+  --color-voith-gray-500: #6b7280;
+  --color-voith-gray-600: #4b5563;
+  --color-voith-gray-700: #374151;
+  --color-voith-gray-800: #1f2937;
+  --color-voith-gray-900: #111827;
   --color-voith-gray-light: #f2f2f2;
   --color-voith-gray-medium: #6f6f6f;
   --color-voith-gray-dark: #4f4f4f;
@@ -32,12 +40,8 @@
   --font-family-sans: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   
   /* Box shadows */
-  --shadow-voith: 0 4px 6px -1px rgba(45, 66, 117, 0.1), 0 2px 4px -1px rgba(45, 66, 117, 0.06);
-  --shadow-voith-lg: 0 10px 15px -3px rgba(45, 66, 117, 0.1), 0 4px 6px -2px rgba(45, 66, 117, 0.05);
-  
-  /* Spacing */
-  --spacing-18: 4.5rem;
-  --spacing-88: 22rem;
+  --shadow-voith: 0 4px 6px -1px rgba(0, 84, 147, 0.1), 0 2px 4px -1px rgba(0, 84, 147, 0.06);
+  --shadow-voith-lg: 0 10px 15px -3px rgba(0, 84, 147, 0.1), 0 4px 6px -2px rgba(0, 84, 147, 0.05);
 }
 
 @layer base {
@@ -50,18 +54,18 @@
 
 @layer utilities {
   .voith-gradient {
-    background: linear-gradient(135deg, #003d82 0%, #2d4275 100%);
+    background: linear-gradient(135deg, #005493 0%, #005493 100%);
   }
   
   .voith-card {
-    @apply bg-white rounded-xl shadow-voith border border-voith-gray-200;
+    @apply bg-white rounded-xl shadow-lg border border-voith-gray-200;
   }
   
   .voith-btn-primary {
-    @apply bg-voith-primary hover:bg-voith-blue-dark text-white font-medium py-3 px-6 rounded-lg transition-all duration-200 ease-in-out shadow-voith hover:shadow-voith-lg flex items-center justify-center;
+    @apply bg-voith-primary hover:bg-voith-blue-dark text-white font-medium py-3 px-6 rounded-lg transition-all duration-200 ease-in-out shadow-lg hover:shadow-voith-lg flex items-center justify-center;
   }
   
   .voith-btn-secondary {
-    @apply bg-white hover:bg-voith-gray-50 text-voith-primary font-medium py-3 px-6 rounded-lg border border-voith-gray-300 transition-all duration-200 ease-in-out shadow-sm hover:shadow-voith flex items-center justify-center;
+    @apply bg-white hover:bg-voith-gray-50 text-voith-primary font-medium py-3 px-6 rounded-lg border border-voith-gray-300 transition-all duration-200 ease-in-out shadow-sm hover:shadow-lg flex items-center justify-center;
   }
 }

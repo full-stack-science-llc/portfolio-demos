@@ -9,9 +9,10 @@ import {
   Title,
   Tooltip,
   Legend,
+  Filler,
 } from 'chart.js';
 import annotationPlugin from 'chartjs-plugin-annotation';
-import { SENSORS, SENSOR_CONFIG } from '../constants/realisticMillData';
+import { SENSORS, SENSOR_CONFIG } from '../constants/millData';
 
 ChartJS.register(
   CategoryScale,
@@ -21,6 +22,7 @@ ChartJS.register(
   Title,
   Tooltip,
   Legend,
+  Filler,
   annotationPlugin
 );
 
